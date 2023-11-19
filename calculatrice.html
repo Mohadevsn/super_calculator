@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Calculator</title>
+    <link rel="stylesheet" href="calculatrice.css">
+</head>
+<body>
+    <h1>My Super calculator</h1>
+    <div class="calculator">
+        <table class="table-calculator">
+            <tr>
+                <th  colspan="4"><input type="text" id="screen" name="display"></th>
+            </tr>
+            <tr>
+                <td colspan="2"><button>Del</button></td>
+                <td ><button id="clear-but">C</button></td>
+                <td ><button id="divide-butt" value="/">/</button></td>
+            </tr>
+            <tr>
+                <td ><button id="7_butt" value="7" onclick="display.value = '7'">7</button></td>
+                <td ><button id="8_butt" value="8">8</button></td>
+                <td ><button id="9_butt" value="9">9</button></td>
+                <td ><button >*</button></td>
+            </tr>
+            <tr>
+                <td ><button id="4_butt" value="4">4</button></td>
+                <td ><button id="5_butt" value="5">5</button></td>
+                <td ><button id="6_butt" value="6">6</button></td>
+                <td ><button id="subs-butt" value="-">-</button></td>
+            </tr>
+            <tr>
+                <td ><button id="3_butt" value="3">3</button></td>
+                <td ><button id="2_butt" value="2">2</button></td>
+                <td ><button id="1_butt" value="1">1</button></td>
+                <td rowspan="2"><button id="add_butt" value="+" >+</button></td>
+            </tr>
+            <tr>
+                <td ><button id="0_butt" value="0">0</button></td>
+                <td ><button id="dot_butt" value=".">.</button></td>
+                <td ><button id="cal_butt" >=</button></td>
+            </tr>
+            
+        </table>
+    </div>
+    
+</body>
+
+<script type="text/javascript" src="calculatrice.js"></script>
+</html>

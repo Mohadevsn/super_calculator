@@ -6,6 +6,25 @@ let globalOperator
 let i = 0;
 screen.value = "";
 
+
+function deleteNumber(){
+    
+    if(i== 0){
+        number1 = parseFloat(screen.value);
+        number1 /= 10 ;
+        number1 = parseInt(number1);
+        console.log(number1);
+        screen.value = number1
+    }
+    else if(i > 0){
+        number2 = parseFloat(screen.value);
+        number2 /= 10 ;
+        number2 = parseInt(number2);
+        console.log(number2);
+        screen.value = number2
+    }
+};
+
 function buttonClick(number){
     screen.value += number ;
     if(i== 0){
@@ -30,6 +49,8 @@ function clearScreen(){
     result = 0;
     i = 0;
 }
+
+
 
 function calculate(){
     screen.value = ""

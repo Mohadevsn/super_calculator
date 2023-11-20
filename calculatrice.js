@@ -1,55 +1,65 @@
 const screen = document.querySelector('#screen');
-let number ;
+let number1, number2 ;
 let result = 0;
 let finalResult ;
-
+let globalOperator
+let i = 0;
 screen.value = "";
 
 function buttonClick(number){
     screen.value += number ;
+    if(i== 0){
+        number1 = parseFloat(screen.value) ;
+    }
+    else if(i > 0){
+        number2 = parseFloat(screen.value)
+    }
+
 };
 
 function operatorSelected(x){
-    number = parseFloat(screen.value) ;
-    operator = x ;
+    globalOperator = x ;
     screen.value = "";
-    console.log(number);
-    console.log(operator)
+    console.log(globalOperator)
+    i++;
+};
+function clearScreen(){
+    screen.value = "";
+    number1 = 0 ;
+    number2 = 0 ;
+    result = 0;
+    i = 0;
+}
 
-    switch (operator) {
+function calculate(){
+    screen.value = ""
+    switch (globalOperator) {
         case "+":
-            result += number;
+            result = number1 + number2;
             console.log(result);
             break;
         
         case "-":
-            result -= number;
+            result = number1 - number2;
             console.log(result);
+
             break;
         case "*":
-            result *= number;
+            result = number1 * number2;
             console.log(result);
+
             break;
         case "/":
-            result /= number;
+            result = number1 / number2;
             console.log(result);
-            break;
-        case "=":
-            calculate();
+
             break;
         default:
             break;
     }
-};
-function clearScreen(){
-    screen.value = "";
-    number = 0 ;
-    result = 0;
-}
-
-function calculate(){
-   
-
+    screen.value += result;
+    number1 = result
+    console.log(result)
     
 };
 

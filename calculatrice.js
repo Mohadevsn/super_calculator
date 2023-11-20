@@ -21,7 +21,6 @@ function operatorSelected(x){
     globalOperator = x ;
     screen.value = "";
     console.log(globalOperator)
-    result = number1;
     i++;
 };
 function clearScreen(){
@@ -36,34 +35,31 @@ function calculate(){
     screen.value = ""
     switch (globalOperator) {
         case "+":
-            result += number2;
+            result = number1 + number2;
             console.log(result);
-            i=0;
             break;
         
         case "-":
-            result -= number2;
+            result = number1 - number2;
             console.log(result);
-            i=0;
 
             break;
         case "*":
-            result *= number2;
+            result = number1 * number2;
             console.log(result);
-            i=0;
 
             break;
         case "/":
-            result /= number2;
+            result = number1 / number2;
             console.log(result);
-            i=0;
 
             break;
         default:
             break;
     }
     screen.value += result;
-    result = screen.value
+    number1 = result
+    console.log(result)
     
 };
 
